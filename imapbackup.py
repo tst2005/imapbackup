@@ -115,7 +115,7 @@ def download_messages(server, filename, messages, config):
   elif config['compress'] == 'bzip2':
     mbox = bz2.BZ2File(filename, 'wb', 512*1024, 9)
   else:
-    mbox = file(filename, 'ab')
+    mbox = open(filename, 'ab')
  
   # the folder has already been selected by scanFolder()
  
